@@ -1,8 +1,8 @@
 <?php
 
-    class MontaSite{
+    class MontaTelaLogin{
         public $html;
-
+    
         public function CriaTelaLogin(){
             $html = '<!DOCTYPE html>
             <html lang="en">
@@ -11,7 +11,8 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>login</title>
                 <link rel="stylesheet" href="style.css">
-                <script src="loguin.js"></script>
+                <script src="jquery.js"></script>
+                <script src="ajax_tela_loguin.js"></script>
             </head>
             <body>
             
@@ -22,7 +23,7 @@
                     <button id="btnSignup">Sign Up</button>
                 </div>
                 <form id="signin">
-                    <input type="text" placeholder="Ususario" required />
+                    <input type="text" placeholder="Usuario" required />
                     <input type="password" placeholder="Senha" required />
                     <button type="submit">Enviar</button>
                 </form>
@@ -38,9 +39,18 @@
             echo $html;
         }
 
+        public function ValidaLogin(){
+            // fazer depois do CriaUsuario
+        }
+
+        public function AdicionaUsuario(){
+
+        }
     }
 
-    $CriarPrimeiraTelaLoguin = new MontaSite();
+    $CriarPrimeiraTelaLoguin = new MontaTelaLogin();
 
     echo $CriarPrimeiraTelaLoguin->CriaTelaLogin();
+
+
 
