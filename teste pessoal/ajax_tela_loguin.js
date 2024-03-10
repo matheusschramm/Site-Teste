@@ -1,10 +1,20 @@
 $(document).ready(function(){
-    var Botao_SigIn = $("#btnSignin");
-    var Botao_SigUp = $("#btnSignUp");
+    var Botao_SigIn = $("#enviaSignIn");
+    var Botao_SigUp = $("#enviaSignUp");
 
-    Botao_SigIn.on('click', function(){
+    Botao_SigUp.on('click', function(e){
+        e.preventDefault();
+        debugger;
         console.log("clicou");
-        var 
+         var usunome = $("#usuSignUp").val();
+         var ususenha = $("#passSignUp").val();
+
+        //  console.log(u"sunome, ususenha);
+        $.post("index.php", {nome: usunome, senha: ususenha})
+            .done(function(data){
+                alert(data);
+            });
+       
     });
 
 });

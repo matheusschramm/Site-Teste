@@ -1,4 +1,5 @@
 <?php
+    require_once("conexao.php");
 
     class MontaTelaLogin{
         public $html;
@@ -23,15 +24,15 @@
                     <button id="btnSignup">Sign Up</button>
                 </div>
                 <form id="signin">
-                    <input type="text" placeholder="Usuario" required />
-                    <input type="password" placeholder="Senha" required />
-                    <button type="submit">Enviar</button>
+                    <input id="usuSignIn" type="text" placeholder="Usuario" required />
+                    <input id="passSignIn" type="password" placeholder="Senha" required />
+                    <button id="enviaSignIn" type="submit">Enviar</button>
                 </form>
             
                 <form id="signup">
-                    <input type="text" placeholder="Ususario" required />
-                    <input type="password" placeholder="Senha" required />
-                    <button type="submit">Enviar</button>
+                    <input id="usuSignUp" type="text" placeholder="Usuario" required />
+                    <input id="passSignUp" type="password" placeholder="Senha" required />
+                    <button id="enviaSignUp" type="submit">Enviar</button>
                 </form>
                </div>
             </body>
@@ -44,7 +45,15 @@
         }
 
         public function AdicionaUsuario(){
+            $usuario = $_POST["nome"];
+            $password = $_POST["senha"];
+            
+            $InsertUsuario = 'INSERT INTO "Usuarios"(usunome, password)
+            VALUES ('.$usuario.','.$password.');';
 
+            $resposta = pg_query(conexao(), $InsertUsuario);
+            
+            return $resposta;
         }
     }
 

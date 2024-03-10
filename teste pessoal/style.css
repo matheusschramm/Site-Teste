@@ -70,7 +70,7 @@ input[type="text"], input[type="password"] {
     width: 100%;
 }
 
-button[type="submit"]{
+#signup > #eenviaSignUp{
     background: #660fc8;
     color: white;
     border-radius: 30px;
