@@ -1,5 +1,6 @@
 <?php
     require_once("conexao.php");
+    require_once("login.php");
 
     class MontaTelaLogin{
         public $html;
@@ -13,7 +14,7 @@
                 <title>login</title>
                 <link rel="stylesheet" href="style.css">
                 <script src="jquery.js"></script>
-                <script src="ajax_tela_loguin.js"></script>
+                <script src="login.js"></script>
             </head>
             <body>
             
@@ -35,25 +36,14 @@
                     <button id="enviaSignUp" type="submit">Enviar</button>
                 </form>
                </div>
+               <div id="teste"> 
+                   
+                </div>
+
+               
             </body>
             </html>';
             echo $html;
-        }
-
-        public function ValidaLogin(){
-            // fazer depois do CriaUsuario
-        }
-
-        public function AdicionaUsuario(){
-            $usuario = $_POST["nome"];
-            $password = $_POST["senha"];
-            
-            $InsertUsuario = 'INSERT INTO "Usuarios"(usunome, password)
-            VALUES ('.$usuario.','.$password.');';
-
-            $resposta = pg_query(conexao(), $InsertUsuario);
-            
-            return $resposta;
         }
     }
 

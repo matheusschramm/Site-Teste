@@ -1,21 +1,39 @@
 <?php
   require_once("conexao.php");
   
-    class FuncoesLogin{
+  
     
-    public function ValidaLogin(){
+  function ValidaLogin(){
     // fazer depois do CriaUsuario
     }
 
-    public function AdicionaUsuario(){
-        $usuario = $_POST["nome"];
-        $password = $_POST["senha"];
+   
+     if(isset($_POST["senha"]) && isset($_POST["nome"])){
+      $senha = $_POST["senha"];
+      $usuario = $_POST["nome"];
+     }
     
-        $InsertUsuario = 'INSERT INTO "Usuarios"(usunome, password)
-        VALUES ('.$usuario.','.$password.');';
 
-        $resposta = pg_query(conexao(), $InsertUsuario);
+  function AdicionaUsuario(){
+  
+    // $usuario = $dados[1];
+    // $password = $dados[2];
+    $usuario = $_POST["nome"];
+    $senha = $_POST["senha"];
     
-         return $resposta;
+    $query = 'INSERT INTO "Usuarios" (usunome, password) VALUES ('.$usuario.','.$senha.');';
+
+    $resposta = pg_query(conexao(), $query);
+
+    // if($resposta){
+    //   $resposta = 'deu certo';
+    // }else{
+    //   $resposta = 'deu algum problema';
+    // }
+    
+    //  echo json_encode($resposta);
+    echo json_encode($resposta);
+     
     }
-}
+  
+  AdicionaUsuario();
