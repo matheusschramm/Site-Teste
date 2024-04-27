@@ -3,65 +3,62 @@ $(document).ready(function(){
     var Botao_SigUp = $("#enviaSignUp");
 
     Botao_SigUp.on('click', function(e){
-        e.preventDefault();
-        debugger;
-        console.log("clicou");
-         
-        var usunome = $("#usuSignUp").val();
-        var ususenha = $("#passSignUp").val();
-        
+            e.preventDefault();
+           
 
-         //  console.log(u"sunome, ususenha);
-        $.post( "login.php", { nome: usunome, senha: ususenha })
-            .done(function(data){
-                alert(data);
+            var usunome = $("#usuSignUp").val();
+            var ususenha = $("#passSignUp").val();
 
-                // var response = JSON.parse(data);
-                // if (response.success) {
-                //     alert(response.message);
-                // } else {
-                //     alert(response.message);
-                // }
-                // // alert(data);
-            });
+            if(usunome == "" && ususenha == ""){
+                alert("preencha os campos para poder criar seu usuario");
+            };
+
+            usunome = $.trim(usunome);
+            ususenha = $.trim(ususenha);
+                    
+            console.log(usunome, ususenha);
             
+            // var Req = new XMLHttpRequest();
+            var oDados = {
+                "nome": usunome, "senha": ususenha
+            };
+            
+            $.ajax({
+                url: 'http://localhost/Site-Teste/login.php',
+                method: 'POST',
+                data: JSON.stringify(oDados),
+                contentType: 'aplication/json',
+                dataType: 'json',
+            }).done(function(result){
+                alert(result);
+            });
+       
         });
-        
+            
     });
-    
-    
+        
+        // });
+        
 
+// ajaxTelaLoguin
 
-    //  $.ajax({
-    //     url: "login.php?info=null",
-    //     type: "POST",
-    //     async: true,
-    //     data: oDados,
-    //     success:function(response){
+                        //  REQUEST FORMA SO JS 
+        
+            // Req.responseType = 'json';
+            // Req.open("GET","http://localhost/Site-Teste/login.php");
 
-    //         console.log("Retorno Login(AJAX):" + JSON.stringify(response));
-    //         var resposta = JSON.parse(response);
-    //            console.log(resposta);
+            // Req.send(oDados);
 
-    //         if(response.loguin){
-    //             window.location.href="site.html";
-    //         } else {
-    //             window.location.href="login.php";
-    //         }
-    //     }
-    //  })
+            // Req.onreadystatechange = function (){
 
-
-
-
-
-
-
-
-
-
-
-
+                
+            //     if(Req.readyState == 4 && Req.status == 200){
+            //         oDados = Req.response;
+            //         console.log(oDados);
+            //     }else{
+            //         alert("algo deu errado");
+            //     }
+            // }
 
 document.addEventListener('DOMContentLoaded', function() {
     var formSignin = document.querySelector('#signin');

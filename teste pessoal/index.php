@@ -1,6 +1,6 @@
 <?php
-    require_once("conexao.php");
-    require_once("login.php");
+    require_once("../conexao.php");
+    require_once("../login.php");
 
     class MontaTelaLogin{
         public $html;
@@ -15,6 +15,8 @@
                 <link rel="stylesheet" href="style.css">
                 <script src="jquery.js"></script>
                 <script src="login.js"></script>
+                
+
             </head>
             <body>
             
@@ -31,8 +33,8 @@
                 </form>
             
                 <form id="signup">
-                    <input id="usuSignUp" type="text" placeholder="Usuario" required />
-                    <input id="passSignUp" type="password" placeholder="Senha" required />
+                    <input name="usuSignUp" id="usuSignUp" type="text" placeholder="Usuario" required />
+                    <input name="passSignUp" id="passSignUp" type="password" placeholder="Senha" required />
                     <button id="enviaSignUp" type="submit">Enviar</button>
                 </form>
                </div>
