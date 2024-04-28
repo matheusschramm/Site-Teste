@@ -59,6 +59,7 @@ form{
     background: linear-gradient(to right, #5956e9, #a963f8);
     border-radius: 30px;
     transition: .3s;
+    left: 0px;
 }
 
 input[type="text"], input[type="password"] {
@@ -70,21 +71,8 @@ input[type="text"], input[type="password"] {
     width: 100%;
 }
 
- #enviaSignUp{
-    background: #660fc8;
-    color: white;
-    border-radius: 30px;
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 8px 0 8px 15px;
-    font-size: 15px;
-    margin-top: 40px;
-    cursor: pointer;
-}
-
 #enviaSignIn{
-    background: #660fc8;
+    background: #6f0bcc;
     color: white;
     border-radius: 30px;
     width: 100%;
@@ -110,7 +98,6 @@ input[type="text"], input[type="password"] {
 
 #SignIn{
     left: 25px;
-
 }
 
 #SignUP{
