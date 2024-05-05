@@ -57,6 +57,14 @@ $(document).ready(function(){
         });
 
         document.querySelector('#btnSignin').click();
+
+        // Botão de manutenção de ususarios apartir da tela de login
+        
+        // document.querySelector('#openModal').addEventListener('click', () => {
+           
+           
+        // });
+
     });
     
     // var btnEnviarSignIn = document.querySelector('#enviaSignIn');
@@ -67,3 +75,5 @@ $(document).ready(function(){
         // document.querySelector('#usuSignIn').addEventListener('click', () => {
         //     btnEnviarSignIn.style.boxShadow = '';
         // });       
+
+
