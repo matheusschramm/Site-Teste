@@ -15,8 +15,6 @@
                 <link rel="stylesheet" href="style.css">
                 <script src="jquery.js"></script>
                 <script src="login.js"></script>
-                
-
             </head>
             <body>
             
@@ -37,17 +35,16 @@
                     <input name="passSignUp" id="passSignUp" type="password" placeholder="Senha" required />
                     <button id="enviaSignUp" type="submit">Enviar</button>
                 </form>
-               </div>
-               <div id="teste"> 
-                   
                 </div>
+                
+                
 
-               
             </body>
             </html>';
             echo $html;
         }
     }
+    // <button id="openModal">eManuel</button>
 
     $CriarPrimeiraTelaLoguin = new MontaTelaLogin();
 

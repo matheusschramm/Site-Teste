@@ -17,7 +17,7 @@ $(document).ready(function(){
             ususenha = $.trim(ususenha);
                     
             console.log(usunome, ususenha);
-            
+
             // var Req = new XMLHttpRequest();
             var oDados = {
                 "nome": usunome, "senha": ususenha
@@ -42,7 +42,7 @@ $(document).ready(function(){
     document.addEventListener('DOMContentLoaded', function() {
         var formSignin = document.querySelector('#signin');
         var formSignup = document.querySelector('#signup');
-        var btncollor = document.querySelector('.btnCollor');        
+        var btncollor = document.querySelector('.btnCollor');      
         
         document.querySelector('#btnSignin').addEventListener('click', () => {
             formSignin.style.left = '25px';
