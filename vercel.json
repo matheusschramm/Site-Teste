@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/login.js": {
-      "runtime": "vercel-php@0.5.2"
-    }
-  }
-}
