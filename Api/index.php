@@ -18,26 +18,26 @@
             </head>
             <body>
             
-               <div class="container">
-                <div class="buttonForm"> 
-                    <div class="btnCollor"></div>
-                    <button id="btnSignin">Sign In</button>
-                    <button id="btnSignup">Sign Up</button>
-                </div>
-                <form id="signin">
-                    <input id="usuSignIn" type="text" placeholder="Usuario" required />
-                    <input id="passSignIn" type="password" placeholder="Senha" required />
-                    <button id="enviaSignIn" type="submit">Enviar</button>
-                </form>
-            
-                <form id="signup">
-                    <input name="usuSignUp" id="usuSignUp" type="text" placeholder="Usuario" required />
-                    <input name="passSignUp" id="passSignUp" type="password" placeholder="Senha" required />
-                    <button id="enviaSignUp" type="submit">Enviar</button>
-                </form>
+                <div class="container">
+                    <div class="buttonForm"> 
+                        <div class="btnCollor"></div>
+                        <button id="btnSignin">Sign In</button>
+                        <button id="btnSignup">Sign Up</button>
+                    </div>
+                    <form id="signin">
+                        <input id="usuSignIn" type="text" placeholder="Usuario" required />
+                        <input id="passSignIn" type="password" placeholder="Senha" required />
+                        <button id="enviaSignIn" type="submit">Enviar</button>
+                    </form>
+                
+                    <form id="signup">
+                        <input name="usuSignUp" id="usuSignUp" type="text" placeholder="Usuario" required />
+                        <input name="passSignUp" id="passSignUp" type="password" placeholder="Senha" required />
+                        <button id="enviaSignUp" type="submit">Enviar</button>
+                    </form>
                 </div>
                 
-                // <button id="openModal">eManuel</button>
+                <button id="openModal">eManuel</button>
                 
 
             </body>
