@@ -3,9 +3,5 @@
     "api/index.php": {
       "runtime": "vercel-php@0.5.2"
     }
-  },
-  "rewrites": [
-    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/(.*)", "destination": "/api/index.php" }
-  ]
+  }
 }
