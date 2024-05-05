@@ -1,6 +1,6 @@
 <?php
-    require_once("../conexao.php");
-    require_once("../login.php");
+    require_once("conexao.php");
+    require_once("login.php");
 
     class MontaTelaLogin{
         public $html;
@@ -12,9 +12,9 @@
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>login</title>
-                <link rel="stylesheet" href="style.css">
-                <script src="jquery.js"></script>
-                <script src="login.js"></script>
+                <link rel="stylesheet" href="../style.css">
+                <script src="../jquery.js"></script>
+                <script src="../login.js"></script>
             </head>
             <body>
             
@@ -37,6 +37,7 @@
                 </form>
                 </div>
                 
+                // <button id="openModal">eManuel</button>
                 
 
             </body>
@@ -44,7 +45,6 @@
             echo $html;
         }
     }
-    // <button id="openModal">eManuel</button>
 
     $CriarPrimeiraTelaLoguin = new MontaTelaLogin();
 
